@@ -46,7 +46,9 @@ public class DepartamentoController {
         return "redirect:/departamentos/cadastrar";
     }
 
+    @RequestMapping(value="/excluir/{id}", method = RequestMethod.GET)
     public String excluir(@PathVariable("id") Long id, ModelMap model){
+        System.out.println("Excluir em DepartamentoController.java");
         if(!service.departamentoTemCargos(id)){
             service.excluir(id);
         }
