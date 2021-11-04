@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@Transactional(readOnly = false)
 public class DepartamentoServiceImpl implements DepartamentoService{
 
     @Autowired
